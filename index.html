@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Video Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>MyTube</h1>
+    </div>
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search videos...">
+      <button onclick="searchVideo()">Search</button>
+    </div><div class="upload-section">
+  <h3>Upload Your Video</h3>
+  <input type="file" id="video-upload" accept="video/*">
+  <button onclick="uploadVideo()">Upload</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="video-player">
+      <div class="progress-bar">
+  <div id="progress" style="width: 0%;"></div>
+      </div>
+      <video id="main-video" src="sample-video.mp4" controls></video>
+    </div><div class="like-dislike">
+  <button id="like-btn" onclick="likeVideo()">👍 Like (<span id="like-count">0</span>)</button>
+  <button id="dislike-btn" onclick="dislikeVideo()">👎 Dislike (<span id="dislike-count">0</span>)</button>
+    </div>
+
+    <div class="recommended-videos">
+      <h2>Recommended Videos</h2>
+      <div class="video-grid">
+        <div class="video-thumbnail" onclick="playVideo('video1.mp4')">
+          <img src="thumbnail1.jpg" alt="Video 1">
+          <p>Video Title 1</p>
+        </div>
+        <div class="video-thumbnail" onclick="playVideo('video2.mp4')">
+          <img src="thumbnail2.jpg" alt="Video 2">
+          <p>Video Title 2</p>
+        </div>
+        <div class="video-thumbnail" onclick="playVideo('video3.mp4')">
+          <img src="thumbnail3.jpg" alt="Video 3">
+          <p>Video Title 3</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
